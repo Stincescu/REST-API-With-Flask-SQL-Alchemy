@@ -74,7 +74,7 @@ def get_books():
 #Get a single book
 @app.route('/book/<id>', methods = ['GET'])
 def get_book(id):
-    book = Book.querry.get(id)
+    book = Book.query.get(id)
     return book_schema.jsonify(book)
 
 #Update a book
